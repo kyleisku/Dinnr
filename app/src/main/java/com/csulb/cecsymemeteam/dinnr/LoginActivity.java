@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         else{
             DataStorage.setLoggedIn(true);
             warningText.setText("");
-            DataStorage.loginName = userTxtField.getText() + "";
+            DataStorage.setLoginName(userTxtField.getText() + "");
             startActivity(new Intent(this, MainActivity.class));
         }
     }

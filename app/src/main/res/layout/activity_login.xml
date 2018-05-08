@@ -10,7 +10,7 @@
         android:id="@+id/login_bgColor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@color/DinnrBlue"
+        app:srcCompat="@color/White"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="2dp" />
 
@@ -21,12 +21,12 @@
         <ImageView
             android:id="@+id/login_titleImg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="108dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/dinnr_title"
+            app:srcCompat="@drawable/mainlogo"
             tools:layout_editor_absoluteX="41dp"
             tools:layout_editor_absoluteY="144dp" />
 
