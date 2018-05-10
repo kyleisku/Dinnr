@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         updateProfile();
+        final ImageButton doneBtn = findViewById(R.id.main_resetButton);
         if(DataStorage.isRestaurantSeleccted()){
             tintScreen(true);
         }
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             nav_menu.findItem(R.id.newAccount).setVisible(false);
             nav_menu.findItem(R.id.login).setVisible(false);
         }
+        nav_menu.findItem(R.id.Favorite).setVisible(false);
         linearLayout.setOnTouchListener(new GestureListener(MainActivity.this)
         {
             @Override
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
                 if(!DataStorage.getListOfRestaurants().empty() && !DataStorage.isRestaurantSeleccted()) {
                     DataStorage.getQueue().add(DataStorage.getListOfRestaurants().pop());
-
+                    doneBtn.setImageResource(R.drawable.done_icon);
                 }
                 updateProfile();
             }
@@ -133,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 if(!DataStorage.getListOfRestaurants().empty()) {
                     DataStorage.getQueue().add(DataStorage.getListOfRestaurants().pop());
+                    doneBtn.setImageResource(R.drawable.done_icon);
                 }
                 updateProfile();
             }
@@ -174,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
                 if(!DataStorage.getListOfRestaurants().empty() && !DataStorage.isRestaurantSeleccted()) {
                     DataStorage.getQueue().add(DataStorage.getListOfRestaurants().pop());
+                    doneBtn.setImageResource(R.drawable.done_icon);
                 }
                 updateProfile();
             }
@@ -264,10 +268,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public void gotoFavorites(View v){
-        startActivity(new Intent(this, FavoritesActivity.class));
-    }
-
     public void gotoProfile(View v){
         startActivity(new Intent(this, ProfileActivity.class));
     }
@@ -284,9 +284,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // Toast.makeText(this,"login",Toast.LENGTH_SHORT.show());
             startActivity(new Intent(this, NewAccountActivity.class));
         }
-        if (id == R.id.Favorite)
-        {
-            startActivity(new Intent(this, FavoritesActivity.class));
+        if (id == R.id.Account){
+            startActivity(new Intent(this, UserProfileActivity.class));
         }
         return false;
     }

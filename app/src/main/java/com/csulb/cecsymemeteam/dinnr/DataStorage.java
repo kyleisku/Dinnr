@@ -16,6 +16,7 @@ public class DataStorage {
     private static boolean beenGenerated = false;
     // Describes whether or not the reset button has been used to select a restaurant already
     private static boolean restaurantSeleccted = false;
+    private static boolean tutorialPlayed = false;
     private static String loginName = "";
     private static Stack<RestaurantProfile> listOfRestaurants = new Stack<>();
     private static ArrayList<RestaurantProfile> queue = new ArrayList<>();
@@ -87,7 +88,7 @@ public class DataStorage {
             listOfRestaurants.push(new RestaurantProfile("Papa John's", "2836 N Bellflower Blvd, Long Beach, CA 90815", "0.8 Miles", 3, R.drawable.papaj));
             listOfRestaurants.peek().generateGenericReviews();
             //Hardee's
-            listOfRestaurants.push(new RestaurantProfile("Hardee's", "2551 Harrison Ave, Butte, MT 59701", "0.6 Miles", 2, R.drawable.hardee));
+            listOfRestaurants.push(new RestaurantProfile("Hardee's", "Hardee's", "0.6 Miles", 2, R.drawable.hardee));
             listOfRestaurants.peek().generateGenericReviews();
             //Popeyes Louisiana Kitchen
             listOfRestaurants.push(new RestaurantProfile("Popeyes Louisiana Kitchen", "21700 Norwalk Blvd, Hawaiian Gardens, CA 90716", "1.9 Miles", 5, R.drawable.popeye));
@@ -177,5 +178,13 @@ public class DataStorage {
 
     public static void setRestaurantSeleccted(boolean restaurantSeleccted) {
         DataStorage.restaurantSeleccted = restaurantSeleccted;
+    }
+
+    public static boolean isTutorialPlayed() {
+        return tutorialPlayed;
+    }
+
+    public static void setTutorialPlayed(boolean tutorialPlayed) {
+        DataStorage.tutorialPlayed = tutorialPlayed;
     }
 }

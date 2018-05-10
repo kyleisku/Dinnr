@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".UserProfileActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:paddingTop="20dp">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/userprofile_profImage"
                     android:layout_width="91dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
@@ -45,7 +45,7 @@
                         android:padding="10dp" />
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/userprofile_username"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -59,7 +59,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="408dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="17dp"
                 android:paddingTop="20dp">
@@ -73,41 +73,55 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/userprofile_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="First Name"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/userprofile_lastName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Last Name"
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/userprofile_gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Gender"
                     android:textSize="18sp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/userprofile_logoutBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Logout" />
+
+                <Button
+                    android:id="@+id/userProfile_backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="logout"
+                    android:text="Back"
+                    tools:layout_editor_absoluteX="278dp"
+                    tools:layout_editor_absoluteY="501dp" />
+            </LinearLayout>
+
         </LinearLayout>
 
-        <Button
-            android:id="@+id/userProfile_backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="15dp"
-            android:onClick="logout"
-            android:text="logout"
-            tools:layout_editor_absoluteX="278dp"
-            tools:layout_editor_absoluteY="501dp" />
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>

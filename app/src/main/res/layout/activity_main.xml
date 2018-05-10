@@ -305,7 +305,7 @@
                     android:cropToPadding="false"
                     android:scaleType="fitCenter"
                     android:visibility="visible"
-                    app:srcCompat="@drawable/check_mark" />
+                    app:srcCompat="@drawable/reset" />
             </LinearLayout>
         </FrameLayout>
 
