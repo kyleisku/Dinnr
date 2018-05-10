@@ -31,7 +31,7 @@ public class MoreReviewsActivity extends AppCompatActivity {
      * @param v
      */
     public void goBack(View v){
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, ProfileActivity.class));
     }
 
     /**
