@@ -32,7 +32,8 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MoreReviewsActivity" />
         <activity android:name=".WriteReviewActivity" />
-        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".videoActivity"></activity>
     </application>
 
 </manifest>

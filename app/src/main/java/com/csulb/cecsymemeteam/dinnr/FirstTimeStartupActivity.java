@@ -20,6 +20,6 @@ public class FirstTimeStartupActivity extends AppCompatActivity {
     }
 
     public void startTour(View v){
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, videoActivity.class));
     }
 }
