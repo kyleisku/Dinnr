@@ -148,4 +148,6 @@
     <color name="Black">#000000</color>
     <color name="reviewsBackground">#d1d0d0</color>
     <color name="darkenScreen">#93000000</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>
