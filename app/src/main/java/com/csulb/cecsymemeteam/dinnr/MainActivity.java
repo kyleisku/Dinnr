@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
         updateProfile();
+        final ImageButton doneBtn = findViewById(R.id.main_resetButton);
         if(DataStorage.isRestaurantSeleccted()){
             tintScreen(true);
         }
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
                 if(!DataStorage.getListOfRestaurants().empty() && !DataStorage.isRestaurantSeleccted()) {
                     DataStorage.getQueue().add(DataStorage.getListOfRestaurants().pop());
-
+                    doneBtn.setImageResource(R.drawable.done_icon);
                 }
                 updateProfile();
             }
@@ -134,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
                 if(!DataStorage.getListOfRestaurants().empty()) {
                     DataStorage.getQueue().add(DataStorage.getListOfRestaurants().pop());
+                    doneBtn.setImageResource(R.drawable.done_icon);
                 }
                 updateProfile();
             }
@@ -175,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
                 if(!DataStorage.getListOfRestaurants().empty() && !DataStorage.isRestaurantSeleccted()) {
                     DataStorage.getQueue().add(DataStorage.getListOfRestaurants().pop());
+                    doneBtn.setImageResource(R.drawable.done_icon);
                 }
                 updateProfile();
             }
