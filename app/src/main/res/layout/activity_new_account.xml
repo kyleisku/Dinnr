@@ -157,7 +157,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/newAccount_usernameTxtField"
-            android:layout_toStartOf="@+id/forgottenLogin_passwordTxtField"
             android:text="*"
             android:textColor="@color/Crimson"
             tools:layout_editor_absoluteX="9dp"
@@ -174,6 +173,7 @@
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:visibility="invisible"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="363dp" />
 
@@ -198,6 +198,7 @@
             android:layout_alignStart="@+id/newAccount_birthdayTxt"
             android:layout_below="@+id/newAccount_birthdayTxt"
             android:popupBackground="@android:drawable/spinner_dropdown_background"
+            android:visibility="invisible"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="388dp" />
 
@@ -208,6 +209,7 @@
             android:layout_alignTop="@+id/newAccount_monthSpinner"
             android:layout_toEndOf="@+id/newAccount_monthSpinner"
             android:popupBackground="@android:drawable/spinner_dropdown_background"
+            android:visibility="invisible"
             tools:layout_editor_absoluteX="102dp"
             tools:layout_editor_absoluteY="388dp" />
 
@@ -218,6 +220,7 @@
             android:layout_alignTop="@+id/newAccount_daySpinner"
             android:layout_toEndOf="@+id/newAccount_daySpinner"
             android:popupBackground="@android:drawable/spinner_dropdown_background"
+            android:visibility="invisible"
             tools:layout_editor_absoluteX="173dp"
             tools:layout_editor_absoluteY="388dp" />
 
