@@ -14,19 +14,21 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="2dp" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/newAccount_signUpTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:text="@string/signup"
+            android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -35,155 +37,188 @@
 
         <TextView
             android:id="@+id/newAccount_warningTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/newAccount_signUpTxt"
             android:layout_below="@+id/newAccount_signUpTxt"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:text="@string/required_warning"
+            android:textAlignment="center"
             android:textColor="@color/Crimson"
             android:visibility="visible"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="65dp" />
 
-        <EditText
-            android:id="@+id/newAccount_firstNameTxtField"
-            android:layout_width="149dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_warningTxt"
-            android:layout_below="@+id/newAccount_warningTxt"
-            android:ems="10"
-            android:hint="@string/first_name"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="113dp" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/newAccount_lastNameTxtField"
-            android:layout_width="173dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/newAccount_firstNameTxtField"
-            android:layout_alignBottom="@+id/newAccount_firstNameTxtField"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@+id/newAccount_firstNameTxtField"
-            android:ems="10"
-            android:hint="@string/last_name"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="113dp" />
+            <EditText
+                android:id="@+id/newAccount_firstNameTxtField"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_warningTxt"
+                android:layout_below="@+id/newAccount_warningTxt"
+                android:layout_marginLeft="22dp"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="113dp" />
 
-        <EditText
-            android:id="@+id/newAccount_emailAddressTxtField"
-            android:layout_width="337dp"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_firstNameTxtField"
-            android:layout_below="@+id/newAccount_firstNameTxtField"
-            android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="159dp" />
+            <EditText
+                android:id="@+id/newAccount_lastNameTxtField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/newAccount_firstNameTxtField"
+                android:layout_alignBottom="@+id/newAccount_firstNameTxtField"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@+id/newAccount_firstNameTxtField"
+                android:ems="10"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="180dp"
+                tools:layout_editor_absoluteY="113dp" />
 
-        <EditText
-            android:id="@+id/newAccount_emailConfirmationTxtField"
-            android:layout_width="337dp"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_emailAddressTxtField"
-            android:layout_below="@+id/newAccount_emailAddressTxtField"
-            android:ems="10"
-            android:hint="@string/confirm_email"
-            android:inputType="textEmailAddress"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="205dp" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/newAccount_usernameTxtField"
-            android:layout_width="235dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_emailConfirmationTxtField"
-            android:layout_below="@+id/newAccount_emailConfirmationTxtField"
-            android:ems="10"
-            android:hint="@string/username"
-            android:inputType="text"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="251dp" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/newAccount_passwordTxtField"
-            android:layout_width="235dp"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_usernameTxtField"
-            android:layout_below="@+id/newAccount_usernameTxtField"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="297dp" />
+            <TextView
+                android:id="@+id/newAccount_emailAddressStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newAccount_firstNameTxtField"
+                android:layout_marginLeft="15dp"
+                android:layout_toStartOf="@+id/newAccount_emailAddressTxtField"
+                android:text="*"
+                android:textColor="@color/Crimson"
+                tools:layout_editor_absoluteX="9dp"
+                tools:layout_editor_absoluteY="159dp" />
 
-        <TextView
-            android:id="@+id/newAccount_emailAddressStar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/newAccount_firstNameTxtField"
-            android:layout_toStartOf="@+id/newAccount_emailAddressTxtField"
-            android:text="*"
-            android:textColor="@color/Crimson"
-            tools:layout_editor_absoluteX="9dp"
-            tools:layout_editor_absoluteY="159dp" />
+            <EditText
+                android:id="@+id/newAccount_emailAddressTxtField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_firstNameTxtField"
+                android:layout_below="@+id/newAccount_firstNameTxtField"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="159dp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/newAccount_emailConfirmationStar"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_emailAddressStar"
-            android:layout_alignTop="@+id/newAccount_emailConfirmationTxtField"
-            android:text="*"
-            android:textColor="@color/Crimson"
-            tools:layout_editor_absoluteX="265dp"
-            tools:layout_editor_absoluteY="41dp" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/newAccount_userNameStar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_emailConfirmationStar"
-            android:layout_below="@+id/newAccount_emailConfirmationTxtField"
-            android:text="*"
-            android:textColor="@color/Crimson"
-            tools:layout_editor_absoluteX="9dp"
-            tools:layout_editor_absoluteY="251dp" />
+            <TextView
+                android:id="@+id/newAccount_emailConfirmationStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_emailAddressStar"
+                android:layout_alignTop="@+id/newAccount_emailConfirmationTxtField"
+                android:layout_marginLeft="15dp"
+                android:text="*"
+                android:textColor="@color/Crimson"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="41dp" />
 
-        <TextView
-            android:id="@+id/newAccount_passwordStar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/newAccount_usernameTxtField"
-            android:text="*"
-            android:textColor="@color/Crimson"
-            tools:layout_editor_absoluteX="9dp"
-            tools:layout_editor_absoluteY="297dp" />
+            <EditText
+                android:id="@+id/newAccount_emailConfirmationTxtField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_emailAddressTxtField"
+                android:layout_below="@+id/newAccount_emailAddressTxtField"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/confirm_email"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="205dp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/newAccount_birthdayTxt"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/newAccount_passwordTxtField"
-            android:layout_marginTop="15dp"
-            android:layout_toEndOf="@+id/newAccount_userNameStar"
-            android:text="@string/birthday"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:visibility="invisible"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="363dp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/newAccount_userNameStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_emailConfirmationStar"
+                android:layout_below="@+id/newAccount_emailConfirmationTxtField"
+                android:layout_marginLeft="15dp"
+                android:text="*"
+                android:textColor="@color/Crimson"
+                tools:layout_editor_absoluteX="9dp"
+                tools:layout_editor_absoluteY="251dp" />
+
+            <EditText
+                android:id="@+id/newAccount_usernameTxtField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_emailConfirmationTxtField"
+                android:layout_below="@+id/newAccount_emailConfirmationTxtField"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="251dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/newAccount_passwordStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newAccount_usernameTxtField"
+                android:layout_marginLeft="15dp"
+                android:text="*"
+                android:textColor="@color/Crimson"
+                tools:layout_editor_absoluteX="9dp"
+                tools:layout_editor_absoluteY="297dp" />
+
+            <EditText
+                android:id="@+id/newAccount_passwordTxtField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_usernameTxtField"
+                android:layout_below="@+id/newAccount_usernameTxtField"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="297dp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/newAccount_genderTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/newAccount_femaleBtn"
             android:layout_below="@+id/newAccount_monthSpinner"
-            android:layout_marginTop="22dp"
+            android:layout_marginLeft="15dp"
             android:text="@string/gender"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -191,95 +226,76 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="363dp" />
 
-        <Spinner
-            android:id="@+id/newAccount_monthSpinner"
-            android:layout_width="87dp"
-            android:layout_height="19dp"
-            android:layout_alignStart="@+id/newAccount_birthdayTxt"
-            android:layout_below="@+id/newAccount_birthdayTxt"
-            android:popupBackground="@android:drawable/spinner_dropdown_background"
-            android:visibility="invisible"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="388dp" />
-
-        <Spinner
-            android:id="@+id/newAccount_daySpinner"
-            android:layout_width="71dp"
-            android:layout_height="19dp"
-            android:layout_alignTop="@+id/newAccount_monthSpinner"
-            android:layout_toEndOf="@+id/newAccount_monthSpinner"
-            android:popupBackground="@android:drawable/spinner_dropdown_background"
-            android:visibility="invisible"
-            tools:layout_editor_absoluteX="102dp"
-            tools:layout_editor_absoluteY="388dp" />
-
-        <Spinner
-            android:id="@+id/newAccount_yearSpinner"
-            android:layout_width="78dp"
-            android:layout_height="19dp"
-            android:layout_alignTop="@+id/newAccount_daySpinner"
-            android:layout_toEndOf="@+id/newAccount_daySpinner"
-            android:popupBackground="@android:drawable/spinner_dropdown_background"
-            android:visibility="invisible"
-            tools:layout_editor_absoluteX="173dp"
-            tools:layout_editor_absoluteY="388dp" />
-
-        <RadioButton
-            android:id="@+id/newAccount_femaleBtn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/newAccount_monthSpinner"
-            android:layout_below="@+id/newAccount_genderTxt"
-            android:text="@string/female"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="427dp" />
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/newAccount_maleBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/newAccount_femaleBtn"
-            android:layout_alignBottom="@+id/newAccount_femaleBtn"
-            android:layout_toEndOf="@+id/newAccount_femaleBtn"
-            android:text="@string/male"
-            tools:layout_editor_absoluteX="94dp"
-            tools:layout_editor_absoluteY="427dp" />
+            <RadioButton
+                android:id="@+id/newAccount_femaleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newAccount_monthSpinner"
+                android:layout_below="@+id/newAccount_genderTxt"
+                android:layout_marginLeft="20dp"
+                android:text="@string/female"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="427dp" />
 
+            <RadioButton
+                android:id="@+id/newAccount_maleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/newAccount_femaleBtn"
+                android:layout_alignBottom="@+id/newAccount_femaleBtn"
+                android:layout_toEndOf="@+id/newAccount_femaleBtn"
+                android:text="@string/male"
+                tools:layout_editor_absoluteX="94dp"
+                tools:layout_editor_absoluteY="427dp" />
 
+            <RadioButton
+                android:id="@+id/newAccount_noAnsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/newAccount_maleBtn"
+                android:layout_alignBottom="@+id/newAccount_maleBtn"
+                android:layout_toEndOf="@+id/newAccount_maleBtn"
+                android:text="Prefer not to answer" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/newAccount_confirmBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/newAccount_lastNameTxtField"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="16dp"
-            android:onClick="createAccount"
-            android:text="@string/confirm"
-            tools:layout_editor_absoluteX="265dp"
-            tools:layout_editor_absoluteY="503dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|right"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/newAccount_backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/newAccount_confirmBtn"
-            android:layout_alignBottom="@+id/newAccount_confirmBtn"
-            android:layout_toEndOf="@+id/newAccount_daySpinner"
-            android:onClick="goBack"
-            android:text="@string/back"
-            tools:layout_editor_absoluteX="173dp"
-            tools:layout_editor_absoluteY="503dp" />
+            <Button
+                android:id="@+id/newAccount_confirmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/newAccount_lastNameTxtField"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:onClick="createAccount"
+                android:text="@string/confirm"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="503dp" />
 
-        <RadioButton
-            android:id="@+id/newAccount_noAnsBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/newAccount_maleBtn"
-            android:layout_alignBottom="@+id/newAccount_maleBtn"
-            android:layout_toEndOf="@+id/newAccount_maleBtn"
-            android:text="Prefer not to answer" />
+            <Button
+                android:id="@+id/newAccount_backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/newAccount_confirmBtn"
+                android:layout_alignBottom="@+id/newAccount_confirmBtn"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@+id/newAccount_daySpinner"
+                android:onClick="goBack"
+                android:text="@string/back"
+                tools:layout_editor_absoluteX="173dp"
+                tools:layout_editor_absoluteY="503dp" />
+        </LinearLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
