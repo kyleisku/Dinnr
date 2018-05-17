@@ -53,7 +53,7 @@
             android:background="@android:drawable/editbox_background"
             android:ems="10"
             android:hint="@string/password"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="271dp" />
 

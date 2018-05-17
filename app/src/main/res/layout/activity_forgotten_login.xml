@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/forgottenLogin_userTxtField"
             android:layout_below="@+id/forgottenLogin_userTxtField"
+            android:onClick="sendEmail"
             android:text="@string/send"
             tools:layout_editor_absoluteX="212dp"
             tools:layout_editor_absoluteY="271dp" />
@@ -91,16 +92,6 @@
             tools:layout_editor_absoluteY="356dp" />
 
         <Button
-            android:id="@+id/forgottenLogin_sendPasswordBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/forgottenLogin_passwordTxtField"
-            android:layout_below="@+id/forgottenLogin_passwordTxtField"
-            android:text="@string/send"
-            tools:layout_editor_absoluteX="212dp"
-            tools:layout_editor_absoluteY="351dp" />
-
-        <Button
             android:id="@+id/forgottenLogin_backBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,6 +103,15 @@
             android:text="@string/back"
             tools:layout_editor_absoluteX="278dp"
             tools:layout_editor_absoluteY="501dp" />
+
+        <TextView
+            android:id="@+id/forgottenLogin_emailSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

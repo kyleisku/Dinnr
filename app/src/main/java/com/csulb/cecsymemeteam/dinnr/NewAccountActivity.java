@@ -12,10 +12,42 @@ public class NewAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_account);
-        RadioButton female = (RadioButton) findViewById(R.id.newAccount_femaleBtn);
-        RadioButton male = (RadioButton) findViewById(R.id.newAccount_maleBtn);
-        RadioButton notAns = (RadioButton) findViewById(R.id.newAccount_noAnsBtn);
-
+        final RadioButton female = (RadioButton) findViewById(R.id.newAccount_femaleBtn);
+        final RadioButton male = (RadioButton) findViewById(R.id.newAccount_maleBtn);
+        final RadioButton notAns = (RadioButton) findViewById(R.id.newAccount_noAnsBtn);
+        female.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(male.isChecked()){
+                    male.setChecked(false);
+                }
+                if(notAns.isChecked()){
+                    notAns.setChecked(false);
+                }
+            }
+        });
+        male.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(female.isChecked()){
+                    female.setChecked(false);
+                }
+                if(notAns.isChecked()){
+                    notAns.setChecked(false);
+                }
+            }
+        });
+        notAns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(male.isChecked()){
+                    male.setChecked(false);
+                }
+                if(female.isChecked()){
+                    female.setChecked(false);
+                }
+            }
+        });
     }
 
     public void goBack(View v){
